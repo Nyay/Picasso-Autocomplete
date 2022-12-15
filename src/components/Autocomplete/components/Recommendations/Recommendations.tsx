@@ -1,17 +1,19 @@
 import React, {FC} from 'react';
 import {RecommendationsContainer} from './Recommendations.styles';
 import {RecommendationItem} from './components/RecommendationItem';
-import {RESPONSE_EXAMPLE} from './constants';
+import {IRecommendations} from './types';
 
-export const Recommendations:FC = () => {
+export const Recommendations:FC<IRecommendations> = ({recommendation, handleClick}) => {
+
     return <RecommendationsContainer>
         {
-            RESPONSE_EXAMPLE.map(({name, domain, logo}, index) => <RecommendationItem
+            recommendation?.map(({name, domain, logo}, index) => <RecommendationItem
                 key={`${name}_${index}`}
                 name={name}
                 domain={domain}
                 logo={logo}
-            />)
+                onClick={handleClick}/>
+            )
         }
     </RecommendationsContainer>
 }
