@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const RecommendationsContainer = styled('div')`
   box-sizing: border-box;
   
-  min-width: 332px;
+  width: 332px;
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
   border-top: none;

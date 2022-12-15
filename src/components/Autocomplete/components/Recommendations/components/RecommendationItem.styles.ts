@@ -5,6 +5,7 @@ export const RecommendationItemStyled = styled('div')`
   display: flex;
   gap: 14px;
   width: auto;
+  max-width: 332px;
 
   padding: 9px 16px;
 
@@ -16,6 +17,10 @@ export const RecommendationItemStyled = styled('div')`
 `
 
 export const OrganizationInfoStyled = styled('div')`
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: auto;
   height: auto;
   align-self: center;
@@ -24,6 +29,10 @@ export const OrganizationInfoStyled = styled('div')`
 export const OrganizationLogoStyled = styled('div')`
   width: 54px;
   height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 `
 
 export const OrganizationNameStyled = styled('p')`
